@@ -3,7 +3,7 @@ on: push
 env:
   docker_username: ${{ github.actor }}
   docker_password: ${{ secrets.GITHUB_TOKEN }} #Needs to be set to be made available to the workflow
-  git_commit: ${{ github.sha }}
+  GIT_COMMIT: ${{ github.sha }}
 jobs:
   Build:
     runs-on: ubuntu-latest
